@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Profusion</title> 
+    <link rel="shortcut icon"
+        href="images/Motivational Typography Design Evoking Nostalgia In Rustic Outdoor Setting.png"
+        type="image/x-icon">
+   
+    <link rel="stylesheet" href="user_selector.css"> 
+</head>
+
+<body>
+
+    <div class="container">
+      
+        <h1>Welcome! What brings you here?</h1>
+
+        
+        <p>Are you a content creator or just browsing?</p>
+
+       
+        <button class="button" id="creatorButton" onclick="redirectToCreatorPage()">
+            I'm a Content Creator
+        </button>
+
+      
+        <button class="button" id="browsingButton" onclick="redirectToBrowsingPage()">
+            I'm Just Browsing
+        </button>
+    </div>
+
+   
+    <script>
+       
+        function redirectToCreatorPage() {
+            window.location.href = "content_selector.html"; 
+        }
+
+       
+        function redirectToBrowsingPage() {
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+
+</html>

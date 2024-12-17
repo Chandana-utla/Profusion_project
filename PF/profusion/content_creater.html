@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   
+    <title>Profusion</title>
+    <link rel="shortcut icon" href="images/Motivational Typography Design Evoking Nostalgia In Rustic Outdoor Setting.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="content_creater.css">
+</head>
+
+<body>
+
+    <div id="content-creator-tab">
+        <h2>Hey, <span id="userNameDisplay">User</span>!</h2>
+        
+         <p>Share your thoughts, ideas, or files with the community.</p>
+        
+         <div class="upload-section">
+             <input type="text" id="creatorName" placeholder="Enter your name" oninput="updateUserName()" />
+            
+             <textarea id="creatorThoughts" placeholder="Write your thoughts here..." rows="3" oninput="autoExpand(this)"></textarea>
+            
+            <button id="button" onclick="uploadContent()">Upload Content</button>
+        </div>
+        
+         <button id="curiosity-button" onclick="redirectToContentPage()">Are you curious what others have shared?</button>
+    </div>
+
+     <script>
+          function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param); 
+        }
+
+         if(screen.width>768){
+            function setBackground(zone) {
+            const body = document.body;
+
+             const zoneBackgrounds = {
+                Tech: "url('images/technology.jpg')",
+                Health: "url('images/healthfitness.jpg')",
+                Travel: "url('images/travelling.jpg')",
+                Writer: "url('images/writer.jpg')",
+                Food: "url('images/cooking.jpg')",
+                Education: "url('images/education.jpg')"
+            };
+
+             body.style.backgroundImage = zoneBackgrounds[zone] || "url('images/workingtogether.jpg')";
+        }
+        }
+
+        const selectedZone = getQueryParam('zone');
+        
+         setBackground(selectedZone);
+
+         function redirectToContentPage() {
+            window.location.href = 'home.html'; 
+        }
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+   
+    <script src="firebasecode.js"></script>
+</body>
+</html>

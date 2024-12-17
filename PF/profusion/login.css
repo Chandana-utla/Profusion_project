@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Cinzel+Decorative&family=Funnel+Display:wght@300..800&family=Macondo+Swash+Caps&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Space+Grotesk:wght@300..700&family=WindSong:wght@400;500&display=swap');
+
+
+body {
+    background-image: url("./images/Green\ Modern\ Beach\ View\ Desktop\ Wallpaper\ \(1\).png"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
+    font-family: "Funnel Display", sans-serif;
+    font-weight: 700; 
+}
+
+#loginSection, #registerSection {
+    font-family: "Funnel Display", sans-serif; 
+    font-weight: 700; 
+    padding: 30px; 
+    border-radius: 10px;
+    text-align: center; 
+    width: 90%; 
+    max-width: 500px;
+    background: rgba(119, 136, 153, 0.312);
+    color: black; 
+    margin-top: 20px;
+}
+
+#loginForm, #registerForm {
+    padding: 20px; 
+    text-align: center; 
+    color: black; 
+}
+
+input {
+    border: none; 
+    border-radius: 10px; 
+    height: 25px; 
+    width: 100%; 
+    padding: 10px; 
+    background: transparent; 
+    color: black;
+    transition: transform 0.3s ease-in-out; 
+}
+
+input:hover {
+    transform: scale(1.02); 
+}
+.password-container {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.password-container .eye-icon {
+    position: absolute; 
+    right: 10px;
+    cursor: pointer;
+    color: black; 
+}
+.error {
+    color: red; 
+    font-size: 12px; 
+    margin-top: 5px; 
+}
+
+.success {
+    color: green; 
+    font-size: 14px; 
+}
+button[type="submit"], #CreateAcc {
+    border-radius: 7px; 
+    padding: 8px 20px; 
+    color: black; 
+    background-color: whitesmoke; 
+    border: none; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    font-family: "Roboto", sans-serif; 
+    font-weight: 500; 
+}
+
+button[type="submit"]:hover, #CreateAcc:hover {
+    background-color: black; 
+    color: whitesmoke; 
+}
+.link a {
+    text-decoration: none; 
+    color: blue; 
+    font-weight: bold; 
+    transition: color 0.3s ease;
+}
+
+.link a:hover {
+    color: darkblue;
+}
+@media (min-width: 1200px) {
+    body {
+        justify-content: center; 
+    }
+
+    #loginSection, #registerSection {
+        width: 40%; 
+        padding: 50px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    #loginSection, #registerSection {
+        width: 60%; 
+        padding: 40px; 
+    }
+
+    body {
+        justify-content: flex-start; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    #loginSection, #registerSection {
+        margin-top: 30px; 
+        padding: 20px; 
+    }
+    
+    body {
+        justify-content: flex-start; 
+        padding-top: 20px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    #loginSection, #registerSection {
+        margin-top: 20px; 
+        width: 95%;
+    }
+    
+    button[type="submit"], #CreateAcc {
+        padding: 10px; 
+        font-size: 14px; 
+    }
+
+    input {
+        padding: 8px; 
+    }
+}

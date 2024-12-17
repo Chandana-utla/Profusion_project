@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+    <title>Profusion</title> 
+    <link rel="shortcut icon"
+        href="images/Motivational Typography Design Evoking Nostalgia In Rustic Outdoor Setting.png"
+        type="image/x-icon">
+
+
+    <link rel="stylesheet" href="content_selector.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   
+    <div class="container">
+         <h1>Content Creator Zone</h1>
+
+         <p>What kind of zone are you interested in creating content about?</p>
+
+         <select id="contentZone" name="contentZone">
+             <option value="">Select a Zone</option>
+
+             <option value="Tech">Technology</option>
+            <option value="Health">Health & Fitness</option>
+            <option value="Travel">Travel</option>
+            <option value="Writer">Writer</option>
+            <option value="Food">Food & Cooking</option>
+            <option value="Education">Education & Tutorials</option>
+        </select>
+
+          <button class="button" onclick="submitSelection()">Submit</button>
+
+         <div id="result"></div>
+    </div>
+
+    <script>
+         function submitSelection() {
+            const contentZone = document.getElementById("contentZone").value;
+
+             if (contentZone === "") {
+                 alert("Please select a content zone.");
+            } else {
+                 window.location.href = `content_creater.html?zone=${encodeURIComponent(contentZone)}`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
